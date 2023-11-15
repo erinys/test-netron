@@ -14,7 +14,9 @@ model = keras.Sequential([
     layers.Flatten(input_shape=(28, 28)),  # Flatten the 28x28 input images
     layers.Dense(128, activation='relu'),  # Fully connected layer with 128 units and ReLU activation
     layers.Dropout(0.2),  # Dropout layer to reduce overfitting
-    layers.Dense(10)  # Output layer with 10 units (one for each digit)
+    layers.Dense(10),  # Output layer with 10 units (one for each digit)
+    layers.Dense(128, activation='relu'),
+    layers.Dropout(0.1)
 ])
 
 # Compile the model
